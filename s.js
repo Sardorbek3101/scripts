@@ -45,7 +45,7 @@
       }
 
       cloud.style.opacity = "1";
-      cloud.textContent = "Думаю...";
+      cloud.textContent = "⏳ Думаю...";
 
       // 🧭 Позиционируем рядом с мышкой
       cloud.style.left = (e.pageX + 10) + "px";
@@ -75,8 +75,8 @@
         });
 
         const data = await res.json();
-        const text = data.result?.trim() || "Нет ответа";
-        cloud.textContent =  text;
+        const text = data.result?.trim() || "❓ Нет ответа";
+        cloud.textContent = "✅ Ответ: " + text;
 
         // ⏱ Убираем через 3 секунды после появления ответа
         clearTimeout(cloud.hideTimeout);
